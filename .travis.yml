@@ -1,0 +1,9 @@
+sudo: required
+services:
+    - docker
+
+before_install:
+    - docker build -t anoopviswappan/react-docker-app -f Dockerfile.dev .
+
+script:
+    - docker run anoopviswappan/react-docker-app npm run test -- --coverage
