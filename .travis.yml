@@ -1,24 +1,20 @@
 sudo: required
 services:
-    - docker
-
+- docker
 before_install:
-    - docker build -t anoopviswappan/react-docker-app -f Dockerfile.dev .
-
+- docker build -t anoopviswappan/react-docker-app -f Dockerfile.dev .
 script:
-    - docker run -e CI=true anoopviswappan/react-docker-app npm run test -- --coverage
-
+- docker run -e CI=true anoopviswappan/react-docker-app npm run test -- --coverage
 deploy:
-    provider: elasticbeanstalk
-    access_key_id: 
-        secure: "$AWS_ACCESS_KEY"
-    secret_access_key:
-        secure: "$AWS_SECRET_KEY"
-    region: "ap-south-1"
-    app: "react-docker-app"
-    env: "ReactDockerApp-env-1"
-    bucket_name: "elasticbeanstalk-ap-south-1-799208866004"
-    bucket_path: "react-docker-app"
-    on:
-        branch: master
-    
+  provider: elasticbeanstalk
+  access_key_id:
+    secure: mN2QB6Ce+6BeOmzDmrYWKGjXOnbUwa+wDXucpi0Yqb9HmmwAlUSOYNZPRYVt6W1EFuuqUOqrQxnyVU6DKc8Kg0aJ3+Uw0NzByqgjKKB7XaqZ4OEKPuj6mnzKB5nToISxBRfqk/T+KbdSvSj0pDe3bcnSxv3tcoWlpld5ZUhIi3tM+ukVyvQRqxECuN+kWZW0Tu4NW5f0yegYyZ6AXdWlEnHVMHgwVd9/Up6xHxCNzCRcTI93urmeH0eJx1IHo81JjNEiGQXmuBo7vV90MD1ztpclUeQ2CaEOnBYpuvpQO1oiSakc90NEMnWVwhPZ7mYRcgcgVkb1bWMXOEbD5kNsTpXSuApoKo4hfiJnudhgKBwUjzxPuTYjCj2yzNIDi6T33+7MKu5BCEiFd00bmH/beFEPVOdZdG2ww55OJoUAF8PmYbI6f/sS1VyqU9gsTa6KSk9THvozzhh3VkoUPJRGrlE1IoeBkIHqUmp2+sUFzJsIzkLnU9uC9wXWftnV0mIUDP3iUV77eiWDrB44oWvcoqQTKTgnnXSK98Ukk7/zr7lP92H5TwtfBPmE80R7RKB4mWOtFWhFNN/k3iqv3jk9VLa0C5st+3fFDCQnZosPUkhYLtVuGYNUU5jY5QuR+K5/tNpvG+KaHFGUjNr1CXVuR9piOeX9G/DhhP7cKHfTbeE=
+  secret_access_key:
+    secure: v+JVPEMVEDasYcCbstYeWR4iAkRTSPxDBXRtPNCWZNPNxpHsJitZdeMaifQEXsDHpUlNxTdNgFENPAd5UxDl89LyQeBpgCNiVguvQI2WzCgEDWy/WagOBoXZekjqYeHJWsLMvQnOFnmm3yd/frktRl8rAHJZuiT/Ix1nSDe0VxqJ+UEX2Z17oXuGrzY6i5BZCGacapyKiR4q1v8UWxCBCV2tOlCobBR9iwcc1TKID8Ckn7ibMd8TFYkew3tygROIdWxyi+9j7f5gtG0NeznuUbxHczBf6Pt003MbQzwp1uoOgqS+oMhvZy7RE5XtRNpvl562Bo77P4iMdJ3R7EX+D/+Xn3OSv6bSNJcZbqraiIPE/H97FgVQHaZGq8RaB2ksxqlHexbR/RtEVf6v38JLUs91HBnGgDETtKficLDf+PGmVEXv6J45rs/XuVQ9A5lqvZuCoSnIBy7U0QzmypxLarjxiCOsm5oyTDUWNP5z9NG7nsQo8IuXhqbacR6/1GPzoldGF9y7h2KgMak6TSGrPQ0/w4+rqG9113oLKYWBaLhS0nnD21bhEpB/Mq0CwIs9beQViKcqvUHcyQBI/tKHqTHDwxNq19T2TZMrZGwE1+nQR1SFexMlPtJmbzewQ3QMXhuQPU1gGCJ665flWXSm25XhTzSwg1mLgk/SQSRL9UE=
+  region: ap-south-1
+  app: react-docker-app
+  env: ReactDockerApp-env-1
+  bucket_name: elasticbeanstalk-ap-south-1-799208866004
+  bucket_path: react-docker-app
+  on:
+    branch: master
