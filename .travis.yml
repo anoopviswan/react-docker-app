@@ -12,8 +12,8 @@ deploy:
   secret_access_key:
     secure: v+JVPEMVEDasYcCbstYeWR4iAkRTSPxDBXRtPNCWZNPNxpHsJitZdeMaifQEXsDHpUlNxTdNgFENPAd5UxDl89LyQeBpgCNiVguvQI2WzCgEDWy/WagOBoXZekjqYeHJWsLMvQnOFnmm3yd/frktRl8rAHJZuiT/Ix1nSDe0VxqJ+UEX2Z17oXuGrzY6i5BZCGacapyKiR4q1v8UWxCBCV2tOlCobBR9iwcc1TKID8Ckn7ibMd8TFYkew3tygROIdWxyi+9j7f5gtG0NeznuUbxHczBf6Pt003MbQzwp1uoOgqS+oMhvZy7RE5XtRNpvl562Bo77P4iMdJ3R7EX+D/+Xn3OSv6bSNJcZbqraiIPE/H97FgVQHaZGq8RaB2ksxqlHexbR/RtEVf6v38JLUs91HBnGgDETtKficLDf+PGmVEXv6J45rs/XuVQ9A5lqvZuCoSnIBy7U0QzmypxLarjxiCOsm5oyTDUWNP5z9NG7nsQo8IuXhqbacR6/1GPzoldGF9y7h2KgMak6TSGrPQ0/w4+rqG9113oLKYWBaLhS0nnD21bhEpB/Mq0CwIs9beQViKcqvUHcyQBI/tKHqTHDwxNq19T2TZMrZGwE1+nQR1SFexMlPtJmbzewQ3QMXhuQPU1gGCJ665flWXSm25XhTzSwg1mLgk/SQSRL9UE=
   region: ap-south-1
-  app: react-docker-app
-  env: ReactDockerApp-env
+  app: docker
+  env: Docker-env
   bucket_name: elasticbeanstalk-ap-south-1-799208866004
   bucket_path: react-docker-app
   on:
