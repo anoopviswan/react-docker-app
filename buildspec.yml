@@ -5,7 +5,7 @@ phases:
         commands:
             - echo Build started on `date`
             - echo Building the Docker image...
-            - docker build -t anoopviswappan/react-docker-app -f Dockerfile.dev
+            - docker build -t anoopviswappan/react-docker-app -f Dockerfile.dev .
             - docker run -e CI=true anoopviswappan/react-docker-app npm run test -- --coverage
     post_build:
         commands:
