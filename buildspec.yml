@@ -1,3 +1,4 @@
+#Build Spec file fir AWS Code Deploy
 version: 0.2
 
 phases:
